@@ -87,3 +87,50 @@ searchForItems('eggs')
 
 # Example
 - Imagine you have a box filld with items, and you know exactly where each items is located. To get a specific item, you go directly to its location, talking the same amount of time irresprctive of how many items are in the box.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+// O(1)
+const getElement = (arr, index) => arr[index];
+console.log(getElement(numbers, 0));
+```
+
+# O(n^2)
+- Indicates that the algorithm's execution time grows quadratically with the size of the input data(represented by n).
+
+```
+function findPairs(arr) {
+  // O(n^2)
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(`Pair: ${arr[i]}, ${arr[j]}`);
+    }
+  }
+
+  // O(n)
+  for (let q = 0; q < arr.length; q++) {
+    console.log("---------------->", q)
+  }
+
+
+  // If we combine all the "O" operations it becomes O(n^2 + n)
+  // O(n^2) is a Dominant term. 
+  // "n" is a Non-Domainant term. 
+  // So we remove the "non-dominant" term and we're only left with O(n^2).
+  // This way, we simplify over bigO.
+}
+
+const numbers = [1, 2, 3, 4, 5];
+findPairs(numbers);
+```
+
+# O(log n)
+- O(log n) time complixity refers to an algorithm's runtime that grows logarithmically with the size of the input (represented by n). In similar terms, as the input size increases, the time it takes for the algorithms to run increases slowly.
+
+log2 8 = ?
+2 to the what power equal 8? 
+
+log2 8 = 3
+
+O(log n)
