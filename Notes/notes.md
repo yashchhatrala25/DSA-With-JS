@@ -238,3 +238,17 @@ reverseMyString(string)
 const reverseTutString = str => str.split("").reverse().join("");
 console.log(reverseTutString("Hello"))
 ```
+
+# Palindromes String (problem3.js)
+- If the reverse string is equal to the original one then that word is a palindrom.
+- cddc -> cddc
+- abba -> abba
+
+```
+// 1. Convert string to array
+// 2. Reverse the array
+// 3. Convert array back to string 
+// 4. Compare strings 
+const palindrom = str => str.split("").reverse().join("") === str;
+console.log(palindrom("hello"));
+```
