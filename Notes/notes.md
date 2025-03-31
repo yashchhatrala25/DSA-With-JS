@@ -134,3 +134,88 @@ log2 8 = ?
 log2 8 = 3
 
 O(log n)
+
+
+# Introduction
+# Custom Array (with challenges)
+# Challenges
+- Reverse String
+- Palindroms
+- Integer Reversal
+- FizzBuzz
+- MaxProfit
+- Array Chunk
+- Two Sum
+
+# Array DS
+- Data Structure array is ordered collection of elements that can be accessed using a numerical index.
+
+```
+const mixed = ["a", 1, true, "b", 2, false]
+```
+
+```
+const stringArr = ['a', 'b', 'c', 'd', 'e'];
+const numArr = [1, 2, 3, 4, 5];
+const boolArr = [true, false];
+const mixArr = ['a', 2, true, undefined, null, {a: 'a'}, ['b']];
+console.log(mixArr);
+```
+
+
+```
+class MyArray {
+    constructor() {
+        this.length = 0;
+        this.data = {};
+    }
+    push(item) {
+        this.data[this.length] = item;
+        this.length++;
+        return this.length;
+    }
+    get(index) {
+        return this.data[index];
+    }
+    pop() {
+        const lastItem = this.data[this.length - 1];
+        delete this.data[this.length - 1];
+        this.length--;
+        return lastItem;
+    }
+
+    shift() {
+        const firstItem = this.data[0];
+
+        // re-indexing
+        for(let i=0; i<this.length; i++) {
+            this.data[i] = this.data[i];
+        }
+
+        delete this.data[this.length - 1];
+        this.length--;
+        return firstItem;
+    }
+
+    delete(index) {
+        const item = this.data[index]
+        for(let i=index; i<this.length-1; i++) {
+            this.data[i] = this.data[i+1]; 
+        }
+
+        delete this.data[this.length - 1];
+        this.length--;
+        return item;
+    }
+}
+
+const myNewArray = new MyArray();
+myNewArray.push('apple')
+myNewArray.push('orange')
+myNewArray.push('mango')
+```
+
+
+# Reverse String
+- Hello -> olleH
+- Apple -> elppA
