@@ -272,3 +272,11 @@ const reverseNum = num => {
 } 
 console.log(reverseNum(1234))
 ```
+
+# Sentence Capitalization (problem5.js)
+- hello world -> Hello World
+- huxn webdev -> HuXn WebDev
+
+```
+
+```
