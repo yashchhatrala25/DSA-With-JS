@@ -278,5 +278,42 @@ console.log(reverseNum(1234))
 - huxn webdev -> HuXn WebDev
 
 ```
+// 1. Make the string lowercase (toLowerCase Method)
+// 2. Convert string to array (split method)
+// 3. Capitalize each word (map method)
+// 4. Convert array back to string (join method)
 
+const capitalize = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+console.log(capitalize("yash chhatrala"))
+```
+
+# FizzBuzz
+```
+// 1. Print numbers from 1 to n
+// 2. If number is divisible by 3, print "Fizz"
+// 3. If number is divisible by 5, print "Buzz"
+// 4. If number is divisible by 3 and 5, print "FizzBuzz"
+// 5. Else, print the number
+
+const fizzBuzz = (n) => {
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+};
+fizzBuzz(15)
 ```
