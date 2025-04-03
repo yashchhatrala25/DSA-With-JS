@@ -294,7 +294,7 @@ const capitalize = (str) => {
 console.log(capitalize("yash chhatrala"))
 ```
 
-# FizzBuzz
+# FizzBuzz (problem6.js)
 ```
 // 1. Print numbers from 1 to n
 // 2. If number is divisible by 3, print "Fizz"
@@ -316,4 +316,33 @@ const fizzBuzz = (n) => {
   }
 };
 fizzBuzz(15)
+```
+
+# Max Profit (problem7.js)
+- Imagine you're buying and selling stocks throughout the year. Your jon is to find the biggest profit you could make by buying low and selling high only once.
+- Here's what you're given:
+  - A list stock prices for each day -> [7,1,5,3,6,4]
+- Here's what you need to find:
+  - The difference between the cheapest price you could have bought the stock and the most expensive price you could have sold it later on.
+
+```
+const maxProfit = (price) => {
+  let minPrice = price[0];
+  let maxProfit = 0;
+  for (let i = 1; i < price.length; i++) {
+    const currentPrice = prices[i];
+
+    // Update minimim price if the lower price is founf
+    minPrice = Math.min(minPrice, currentPrice);
+
+    const potentialPrice = currentPrice - minPrice;
+
+    maxProfit = Math.max(maxProfit, potentialPrice);
+  }
+  return maxProfit;
+};
+
+const prices = [7, 1, 5, 3, 6, 4];
+const profit = maxProfit(prices);
+console.log("Max Profit: ", profit);
 ```
