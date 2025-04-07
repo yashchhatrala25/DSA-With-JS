@@ -379,4 +379,59 @@ console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3));
 - Imagine you have a list of numbers and a target number. Your job is to find two numbers in that list that add up to the target number. You also need to tell which position (or indexes) those two numbers are at in the list.
 - Example:
 - If the list is [2,7,11,15] and the target is 9, then the answer would be [0,1] because 2 (at index 0) plus 7 (at index 1) equals 9.
-- 
+
+```
+function twoSum(nums, target) {
+  // Loop through each number in the list
+  for (let i = 0; i < nums.length; i++) {
+    // For each number, check the rest of the list
+    for (let j = i + 1; j < nums.length; j++) {
+      // If the current number and the one we're checking add up to the target, return their indexes
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
+    }
+  }
+  return [];
+}
+
+const res = twoSum([2, 7, 11, 15], 13);
+console.log(res);
+```
+
+
+# LinkedList
+# Singly LinkedList
+- Push (Challenge) 
+- Pop (Challenge) 
+- Unshift (Challenge) 
+- Shift (Challenge) 
+- GetFirst (Challenge) 
+- GetLast (Challenge) 
+- Set (Challenge) 
+- Inset (Challenge) 
+- Size (Challenge) 
+- Clear (Challenge) 
+
+# Doubly LinkedList
+- Push (Challenge)
+- Pop (Challenge)
+- Unshift (Challenge)
+- Shift (Challenge)
+
+# Reversed LinkedList
+
+
+# Linked List
+- A linked list is a linear data structure where elements, called nodes, are not stored contiguously in memory. Instead, each node contains data and a reference, or link, to the next node in the sequence.
+- Head        Tail
+- 1-->2-->3-->4-->null
+- 1-->Reference-->2-->Reference-->null
+- Data
+
+```
+{
+  data: 1,
+  next: null
+}
+```
