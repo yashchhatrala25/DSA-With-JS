@@ -464,10 +464,35 @@ class LinkedList {
         this.tail = newNode;
         this.length++; 
     }
+
+    // Pop Method
+    pop() {
+        if (!this.head) {
+            return undefined;
+        }
+
+        let temp = this.head;
+        let prev = this.head;
+        while(temp.next) {
+            prev = temp;
+            temp = prev.next;
+        }
+        this.tail = prev;
+        this.tail.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+
+        return temp;
+    }
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(1);
+myLinkedList.pop();
 console.log(myLinkedList)
 ```
 
