@@ -488,11 +488,27 @@ class LinkedList {
 
         return temp;
     }
+
+    // Unshft Method
+    unshift(value) {
+        const newNode = new Node(value);
+
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        }
+
+        newNode.next = this.next;
+        this.head = newNode;
+        this.length++;
+        return this;
+    }
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(1);
-myLinkedList.pop();
+// myLinkedList.pop();
+myLinkedList.unshift(0);
 console.log(myLinkedList)
 ```
 
