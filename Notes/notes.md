@@ -503,12 +503,33 @@ class LinkedList {
         this.length++;
         return this;
     }
+
+    // Shft Method
+    shift() {
+        if (!this.head) {
+            return undefined;
+        }
+
+        // 1. Point the first node/element
+        const temp = this.head
+        // 2. Move the head to next node/element
+        this.head = this.head.next;
+        // 3. Remove first element
+        temp.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        }
+        return temp;
+    }
 }
 
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(1);
 // myLinkedList.pop();
-myLinkedList.unshift(0);
+// myLinkedList.unshift(0);
+myLinkedList.shift();
 console.log(myLinkedList)
 ```
 
